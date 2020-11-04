@@ -59,7 +59,7 @@
     sizeButton.layer.borderColor = [UIColor blackColor].CGColor;
     sizeButton.layer.borderWidth = 1.f;
     sizeButton.layer.cornerRadius = 8.f;
-    [sizeButton setFrame:CGRectMake(100.f, CGRectGetMaxY(previewLabel.frame)+10.f, self.view.frame.size.width-200.f, 40.f)];
+    [sizeButton setFrame:CGRectMake(30.f, CGRectGetMaxY(previewLabel.frame)+10.f, self.view.frame.size.width-60.f, 40.f)];
     sizeButton.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleTopMargin;
     [sizeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [sizeButton addTarget:self action:@selector(sizeButtonAction) forControlEvents:UIControlEventTouchUpInside];
@@ -69,7 +69,7 @@
     fontButton.layer.borderColor = [UIColor blackColor].CGColor;
     fontButton.layer.borderWidth = 1.f;
     fontButton.layer.cornerRadius = 8.f;
-    [fontButton setFrame:CGRectMake(100.f, CGRectGetMaxY(previewLabel.frame)+60, self.view.frame.size.width-200, 40.f)];
+    [fontButton setFrame:CGRectMake(30.f, CGRectGetMaxY(previewLabel.frame)+60, self.view.frame.size.width-60, 40.f)];
     fontButton.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleTopMargin;
     [fontButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [fontButton addTarget:self action:@selector(fontButtonAction) forControlEvents:UIControlEventTouchUpInside];
