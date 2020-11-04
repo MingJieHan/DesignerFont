@@ -43,7 +43,7 @@
 -(id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self){
-        
+        self.backgroundColor = [UIColor colorWithRed:0.91 green:0.91 blue:0.92 alpha:1.f];
         availableSizesArray = [[NSMutableArray alloc] init];
         for (float i=5.f;i<72.f;i++){
             [availableSizesArray addObject:[NSString stringWithFormat:@"%.0f",i]];

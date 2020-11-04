@@ -41,6 +41,7 @@
 -(id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self){
+        self.backgroundColor = [UIColor colorWithRed:0.91 green:0.91 blue:0.92 alpha:1.f];
         availableFontsArray = [[NSMutableArray alloc] init];
         NSArray *familyNames = [UIFont familyNames];
         for(NSString *familyName in familyNames ){
@@ -76,6 +77,16 @@
 }
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     return [availableFontsArray objectAtIndex:row];
+}
+-(UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
+    NSString *fontName = [availableFontsArray objectAtIndex:row];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 0.f, self.frame.size.width, 40.f)];
+    label.textColor = [UIColor blackColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.backgroundColor = [UIColor clearColor];
+    label.text = fontName;
+    label.font = [UIFont fontWithName:fontName size:24.f];
+    return label;
 }
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     NSString *fontName = [availableFontsArray objectAtIndex:row];
