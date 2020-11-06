@@ -50,6 +50,11 @@
                 [availableFontsArray addObject:fontName];
             }
         }
+        [availableFontsArray sortUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+            NSString *str1 = (NSString *)obj1;
+            NSString *str2 = (NSString *)obj2;
+            return [str1 compare:str2];
+        }];
         
         pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0.f, 0.f, frame.size.width, frame.size.height)];
         pickerView.delegate = self;
